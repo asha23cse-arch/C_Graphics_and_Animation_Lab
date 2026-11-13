@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>চাষি ভাইয়ের অভিযান</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+
+    <header class="hud">
+      <div class="hud-item"><span class="icon">⭐</span><span class="label">স্কোর</span><span class="val" id="score">0</span></div>
+      <div class="hud-item"><span class="icon">🌾</span><span class="label">ধান</span><span class="val" id="coins">0</span></div>
+      <div class="hud-item"><span class="icon">❤️</span><span class="label">জীবন</span><span class="val" id="lives">3</span></div>
+      <div class="hud-item"><span class="icon">🏆</span><span class="label">সেরা</span><span class="val" id="best">0</span></div>
+    </header>
+
+    <div class="progress" aria-hidden="true">
+      <div class="track">
+        <div class="fill" id="progFill"></div>
+        <div class="dot" id="progDot"></div>
+      </div>
+      <div class="flag-mini"></div>
+    </div>
+
+    <div class="stage">
+      <canvas id="game" width="960" height="540"></canvas>
+      <button id="cancelBtn" class="cancel" type="button" aria-label="বাতিল করে হোমে যাও">✖ বাতিল</button>
+      <button id="muteBtn" class="mute" type="button" aria-label="সাউন্ড চালু/বন্ধ">🔊</button>
+
+      <div id="overlay" class="overlay">
+        <div class="card">
+          <h1 id="ovTitle">চাষি ভাইয়ের অভিযান</h1>
+          <p id="ovText">ধান কুড়াও, পোকা মাড়াও, আর শেষে জাতীয় পতাকার কাছে পৌঁছাও!</p>
+
+          <ul class="howto" id="howto">
+            <li><span class="ic">👆</span><span><b>ট্যাপ / ক্লিক / Space</b> = লাফ <small>(বেশিক্ষণ চেপে ধরলে উঁচু লাফ)</small></span></li>
+            <li><span class="ic">🏃</span><span>চাষি ভাই নিজে নিজেই সামনে দৌড়ায়</span></li>
+            <li><span class="ic">🌊</span><span>পুকুর ডিঙিয়ে যাও, নইলে ডুবে যাবে!</span></li>
+            <li><span class="ic">🐛</span><span>পোকার ওপর লাফ দিয়ে মাড়াও</span></li>
+            <li><span class="ic">🌾</span><span>ধান কুড়িয়ে স্কোর বাড়াও</span></li>
+          </ul>
+
+          <button id="ovBtn" type="button">▶ খেলা শুরু করো</button>
+          <button id="homeBtn" class="home" type="button">🏠 হোম</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
